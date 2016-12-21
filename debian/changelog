@@ -2,6 +2,10 @@ ostree (2016.12-1endless1) xenial; urgency=medium
 
   * Use source format 1.0 as this will be applied on top of the jenkins
     generated source package of the same.
+  * Back out debhelper 10 changes to be compatible with xenial. (T14049)
+    - debian/compat: Drop back to debhelper 9.
+    - debian/control: Add back dh-autoreconf and dh-systemd deps.
+    - debian/rules: Add back --with autoreconf and systemd.
 
  -- Dan Nicholson <nicholson@endlessm.com>  Fri, 04 Nov 2016 13:15:41 -0700
 
